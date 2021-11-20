@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  border: 2px solid purple;
+  padding: 5px;
+}
+a{
+  text-decoration: none;
+}
+
+.App > h1{
+  text-align: center;
+}
+
+.App > h1 > span {
+  color: green;
+}
+
+input[type="text"],input[type="password"], input[type="submit"], button {
+  padding: 5px;
+  margin: 5px;
+  background-color: purple;
+  color: white;
+  border: none;
+  font-size: 20px;
+}
+ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}

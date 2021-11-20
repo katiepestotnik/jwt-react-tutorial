@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //signup route
+        // fetch("http://localhost:3000/auth/signup", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     },
+        //     body: JSON.stringify({username: "Sunny", password: "Dog"})
+        // })
+        // .then(response=>response.json())
+        // .then(data=>console.log(data))
+        //login
+        // fetch("http://localhost:3000/auth/login", {
+        //     method: "POST",
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     },
+        //     body: JSON.stringify({username: "Sunny", password: "Dog"})
+        // })
+        // .then(response=>response.json())
+        // .then(data=>console.log(data))
+        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlN1bm55IiwiaWF0IjoxNjM3MzcxMjUzfQ.NUZN1Sw_W1KS7TgfdAG8_vYs1bItYTEoDC4KLfdtviE"
+        //create note
+        fetch("http://localhost:3000/note/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `bearer ${token}`
+            },
+            body: JSON.stringify({note:"I am an old dog and I sleep a lot and I can't see"})
+        })
+        .then(response=>response.json())
+        .then(data=>console.log(data))
+    </script>
+</body>
+</html>
